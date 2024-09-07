@@ -1,13 +1,13 @@
 all: serial parallel-tasks parallel-taskloop
 
 serial:
-	${CC} a2-llcs.c -o llcs-serial -O2
+	${CC} llcs_main.c -o llcs-serial -O2
 
 parallel-tasks: 
-	${CC} a2-llcs.c -o llcs-parallel-tasks -O2 -fopenmp -D _TASKS
+	${CC} llcs_main.c -o llcs-parallel-tasks -O2 -fopenmp -D _TASKS
 
 parallel-taskloop: 
-	${CC} a2-llcs.c -o llcs-parallel-taskloop -O2 -fopenmp -D _TASKLOOP
+	${CC} llcs_main.c -o llcs-parallel-taskloop -O2 -fopenmp -D _TASKLOOP
 
 clean:
 	rm llcs-serial

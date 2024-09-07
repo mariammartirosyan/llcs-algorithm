@@ -95,7 +95,6 @@ unsigned long long llcs_parallel_tasks(const char *X, const char *Y, unsigned in
     return entries_visited;
 }
 
-
 unsigned long long llcs_parallel_taskloop(const char *X, const char *Y, unsigned int **M)
 {
     // your explicit tasking code here
